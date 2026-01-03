@@ -27,15 +27,15 @@ build-grid:
 	mkdir -p $(DIST_DIR)
 	echo "Building for linux-armv7"
 	GOOS=linux GOARCH=arm GOARM=7 $(MAKE) build
-	tar -czf $(DIST_DIR)/boring-$(TAG)-${GOOS}-${GOARCH}v${GOARM}.tar.gz LICENSE -C $(DIST_DIR) boring
+	tar -czf $(DIST_DIR)/boring-$(TAG)-linux-armv7.tar.gz LICENSE -C $(DIST_DIR) boring
 	rm -f $(DIST_DIR)/boring
 	echo "Building for linux-armv6"
 	GOOS=linux GOARCH=arm GOARM=6 $(MAKE) build
-	tar -czf $(DIST_DIR)/boring-$(TAG)-${GOOS}-${GOARCH}v${GOARM}.tar.gz LICENSE -C $(DIST_DIR) boring
+	tar -czf $(DIST_DIR)/boring-$(TAG)-linux-armv6.tar.gz LICENSE -C $(DIST_DIR) boring
 	rm -f $(DIST_DIR)/boring
 	echo "Building for linux-armv5"
 	GOOS=linux GOARCH=arm GOARM=5 $(MAKE) build
-	tar -czf $(DIST_DIR)/boring-$(TAG)-${GOOS}-${GOARCH}v${GOARM}.tar.gz LICENSE -C $(DIST_DIR) boring
+	tar -czf $(DIST_DIR)/boring-$(TAG)-linux-armv5.tar.gz LICENSE -C $(DIST_DIR) boring
 	rm -f $(DIST_DIR)/boring
 
 build-test:
